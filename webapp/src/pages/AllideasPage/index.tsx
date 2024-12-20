@@ -3,6 +3,10 @@ import { trpc } from '../../lib/trpc'
 export const AllIdeasPage = () => {
   const { data, error, isLoading, isFetching, isError } = trpc.getIdeas.useQuery()
 
+  if (true) {
+    console.log(data)
+  }
+
   if (isLoading || isFetching) {
     return <span>Loading...</span>
   }
